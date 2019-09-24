@@ -1,6 +1,6 @@
         .navbar{
             list-style:none;
-            background-color: #001fff;
+            background-color: black;
             overflow:hidden;
             padding:0;
         }
@@ -27,7 +27,7 @@
             display:none;
             position:absolute;
             z-index:1;
-            background-color: #001fff;
+            background-color: black;
         }
         
         .dropdown-content li{
@@ -47,8 +47,9 @@
         }
         
         body{
-            height: 100%;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
             background: linear-gradient(to right top, #ff0064, #eb5acc, #9c98ff, #00c3ff, #00deff);
+        }
+            
+        table{
+            border: 3px solid crimson;
         }
