@@ -4,7 +4,7 @@
             overflow:hidden;
             padding:0;
         }
-        
+
         .navbar a, .dropdown div{
             text-decoration:none;
             color: white;
@@ -12,15 +12,15 @@
             padding: 16px;
             display:inline-block;
         }
-        
+
         .navbar li{
             float:left;
         }
-        
+
         .navbar li:hover{
             background-color:Cyan;
         }
-        
+
         .dropdown-content{
             list-style:none;
             padding: 0;
@@ -29,15 +29,15 @@
             z-index:1;
             background-color: black;
         }
-        
+
         .dropdown-content li{
             float:none;
         }
-        
+
         .dropdown:hover .dropdown-content{
             display:block;
         }
-        
+
         .active{
             background-color: #ff1768;
         }
@@ -45,11 +45,15 @@
         html{
             height: 100%;
         }
-        
+
         body{
             background: linear-gradient(to right top, #ff0064, #eb5acc, #9c98ff, #00c3ff, #00deff);
         }
-            
+
         table{
             border: 3px solid crimson;
+        }
+
+        img{
+            color:white
         }
