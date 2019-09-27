@@ -3,6 +3,7 @@
             background-color: black;
             overflow:hidden;
             padding:0;
+            font-family: Verdana;
         }
 
         .navbar a, .dropdown div{
@@ -47,13 +48,22 @@
         }
 
         body{
-            background: linear-gradient(to right top, #ff0064, #eb5acc, #9c98ff, #00c3ff, #00deff);
+            background: linear-gradient(to right top, #1d2dcb, #1444c8, #2555c1, #3c64b7, #5471ab, #5d6996, #606281, #5e5c6e, #4b4450, #352e34, #1f1a1c, #000000);
+        }
+
+        h2{
+            color: white;
+            font-family: Verdana;
         }
 
         table{
             border: 3px solid crimson;
+            color:white;
+            font-family: Verdana;
         }
 
-        img{
-            color:white
+        .aboutme-content{
+            color: white;
+            font-family: Verdana;
+            margin: 50%
         }
