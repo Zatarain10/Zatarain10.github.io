@@ -56,4 +56,5 @@
         table{
             border: 3px solid crimson;
             border-collapse: collapse;
+            text-align: left;
         }
