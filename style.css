@@ -53,7 +53,7 @@
             font-size: 12px;
         }
 
-        table{
+        table, th , td{
             border: 3px solid crimson;
             border-collapse: collapse;
             text-align: left;
