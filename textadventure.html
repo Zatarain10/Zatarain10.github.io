@@ -11,7 +11,7 @@
             bottom: 0px;
             left: 0px;
             right: 0px;
-            background-color: green;
+            background-color: skyblue;
         }
 
         #leftpane{
@@ -21,26 +21,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: red;
         }
 
         #rightpane{
             width: 44%;
             height: 100%;
             float: left;
-            background-color: blue;
-
         }
 
         #storytext{
             position: absolute;
-            bottom: 50px;
+            bottom: 100px;
             top: 0px;
             left: 56%;
             right: 0px;
-            display: flex;
-            align-items: center;
-            background-color: cyan;
+            justify-content: center;
+            padding: 8px;
         }
 
         #choices{
@@ -52,10 +48,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: yellow;
         }
 
-        #b1{
+        #b1, #b2, #b3, #b4{
             display: inline-block;
             background-color: purple;
             color: white;
@@ -66,6 +61,11 @@
             margin: 8px;
         }
 
+        #storyimg{
+            max-height: 97%;
+            max-width: 97%;
+            width: 97%;
+        }
         
     </style>
 
@@ -88,19 +88,111 @@
 
         <div id="container">
             <div id="leftpane">
+                <img id="storyimg" src="images/spongebob.jpg">
             </div>
 
             <div id="rightpane">
                 <div id="storytext">
+                    <p id="ptext1">Fruit based text adventure game</p>
+                    <p id="ptext2">I guess</p>
+                    <p id="ptext3">:/</p>
+                    <p id="ptext4">:///</p>
                 </div>
                 <div id="choices">
-                    <a id="b1" href="#">Choice 1</a>
-                    <a id="b2" href="#">Choice 2</a>
-                    <a id="b3" href="#">Choice 3</a>
-                    <a id="b4" href="#">Choice 4</a>
+                    <a id="b1" onclick= "bclick(1)" href="#">Choice 1</a>
+                    <a id="b2" onclick= "bclick(2)" href="#">Choice 2</a>
+                    <a id="b3" onclick= "bclick(3)" href="#">Choice 3</a>
+                    <a id="b4" onclick= "bclick(4)" href="#">Choice 4</a>
                 </div>
             </div>
         </div>
+    
+    <script>
+        var pic = document.getElementById("storyimg");
+        var ptext1 = document.getElementById("ptext1");
+        var ptext2 = document.getElementById("ptext2");
+        var ptext3 = document.getElementById("ptext3");
+        var ptext4 = document.getElementById("ptext4");
+        var b1 = document.getElementById("b1");
+        var b2 = document.getElementById("b2");
+        var b3 = document.getElementById("b3");
+        var b4 = document.getElementById("b4");
+        var state = "intro";
+        intro();
 
+        function intro(){
+            pic.src = "images/spongebob.jpg";
+            ptext1.innerHTML = "Intro to story";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Start";
+            b2.innerHTML = "No";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function meetPatrick(){
+            pic.src = "images/patrick.jpg";
+            ptext1.innerHTML = "You meet Patrick";
+            ptext2.innerHTML = "What do you do?";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Attack";
+            b2.innerHTML = "Talk";
+            b3.innerHTML = "Run";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "block";
+            b4.style.display = "none";
+        }
+
+        function attackPatrick(){
+            pic.src = "images/savage-pat.jpg";
+            ptext1.innerHTML = "What do you attack with?";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Slap";
+            b2.innerHTML = "Punch";
+            b3.innerHTML = "Trombone";
+            b3.innerHTML = "Tickle";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "block";
+            b4.style.display = "none";
+        }
+
+        //state machine
+        function bclick(button){
+            if(state == "intro"){
+                if (button == 1){
+                    meetPatrick();
+                    state = "meetPatrick";
+                }
+                else if(button == 2){
+                    //send to place
+                    intro();
+                    state = "intro";
+                }
+            }
+            else if(state == "meetPatrick"){
+                if(button == 1){
+                    attackPatrick()
+                    state = "attackPatrick"
+                }
+                else if(button == 2){
+                    //Run
+                }
+                else if(button == 3){
+                    //Tame
+                }
+            }
+            return false;
+        }
+
+    </script>
     </body>
 </html>
