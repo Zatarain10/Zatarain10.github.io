@@ -55,7 +55,7 @@
             background-color: purple;
             color: white;
             font-size: 16px;
-            padding: 10px;
+            padding: 8px;
             border-radius: 8px;
             text-decoration: none;
             margin: 8px;
@@ -150,7 +150,7 @@
         }
 
         function attackPatrick(){
-            pic.src = "images/savage-pat.jpg";
+            pic.src = "images/savage-patrick.jpg";
             ptext1.innerHTML = "What do you attack with?";
             ptext2.innerHTML = "";
             ptext3.innerHTML = "";
@@ -158,11 +158,74 @@
             b1.innerHTML = "Slap";
             b2.innerHTML = "Punch";
             b3.innerHTML = "Trombone";
-            b3.innerHTML = "Tickle";
+            b4.innerHTML = "Tickle";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "block";
+            b4.style.display = "block";
+        }
+
+        function talkPatrick(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "What do you talk about to Patrick";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Is this the Krusty Krab?";
+            b2.innerHTML = "Jellyfish Catching";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function runPatrick(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "Patrick chased after you";
+            ptext2.innerHTML = "but you narrowly escaped";
+            ptext3.innerHTML = "after you jumped into a seaweed.";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function meetSponge(){
+            pic.src = "images/sponge.jpg";
+            ptext1.innerHTML = "You meet Spongebob";
+            ptext2.innerHTML = "What do you do?";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Attack";
+            b2.innerHTML = "Talk";
+            b3.innerHTML = "Run";
             b1.style.display = "block";
             b2.style.display = "block";
             b3.style.display = "block";
             b4.style.display = "none";
+        }
+
+        function attackSponge(){
+            pic.src = "images/sponge.jpg";
+            ptext1.innerHTML = "What do you attack with?";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Slap";
+            b2.innerHTML = "Punch";
+            b3.innerHTML = "Trombone";
+            b4.innerHTML = "Tickle";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "block";
+            b4.style.display = "block";
         }
 
         //state machine
@@ -184,12 +247,28 @@
                     state = "attackPatrick"
                 }
                 else if(button == 2){
-                    //Run
+                    talkPatrick()
+                    state = "talkPatrick"
+
                 }
                 else if(button == 3){
-                    //Tame
+                    runPatrick()
+                    state = "runPatrick"
                 }
             }
+            else if(state == "runPatrick"){
+                if(button == 1){
+                    meetSponge()
+                    state = "meetSponge"
+                }
+            }
+            else if(state == "meetSponge"){
+                if(button == 1){
+                    attackSponge()
+                    state = "attackSponge"
+                }   
+            }
+            
             return false;
         }
 
