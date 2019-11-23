@@ -128,6 +128,19 @@
             ptext3.innerHTML = "";
             ptext4.innerHTML = "";
             b1.innerHTML = "Start";
+            b2.innerHTML = "Flowchart";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function flowchart(){
+            pic.src = "images/chart.jpg";
+            ptext1.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Start";
             b2.innerHTML = "";
             b1.style.display = "block";
             b2.style.display = "none";
@@ -489,8 +502,14 @@
                     state = "meetPatrick";
                 }
                 else if(button == 2){
-                    intro();
-                    state = "intro";
+                    flowchart();
+                    state = "flowchart";
+                }
+            }
+            else if(state == "flowchart"){
+                if(button == 1){
+                    meetPatrick()
+                    state = "meetPatrick"
                 }
             }
             else if(state == "meetPatrick"){
