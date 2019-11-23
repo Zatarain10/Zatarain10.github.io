@@ -11,7 +11,7 @@
             bottom: 0px;
             left: 0px;
             right: 0px;
-            background-color: skyblue;
+            background-color: blue;
         }
 
         #leftpane{
@@ -37,6 +37,7 @@
             right: 0px;
             justify-content: center;
             padding: 8px;
+            font-size: 16px;
         }
 
         #choices{
@@ -122,14 +123,14 @@
 
         function intro(){
             pic.src = "images/spongebob.jpg";
-            ptext1.innerHTML = "Intro to story";
+            ptext1.innerHTML = "A giant Jellyfish terrorizing Bikini Bottom. You have been hired to defeat it by any means.";
             ptext2.innerHTML = "";
             ptext3.innerHTML = "";
             ptext4.innerHTML = "";
             b1.innerHTML = "Start";
-            b2.innerHTML = "No";
+            b2.innerHTML = "";
             b1.style.display = "block";
-            b2.style.display = "block";
+            b2.style.display = "none";
             b3.style.display = "none";
             b4.style.display = "none";
         }
@@ -165,6 +166,70 @@
             b4.style.display = "block";
         }
 
+        function slapPatrick(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "You slapped patrick with extreme force";
+            ptext2.innerHTML = "Patrick dies";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function punchPatrick(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "You punched Patrick";
+            ptext2.innerHTML = "It does nothing";
+            ptext3.innerHTML = "He punches you back";
+            ptext4.innerHTML = "You died";
+            b1.innerHTML = "";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "none";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function trombonePatrick(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "You used a trombone against Patrick";
+            ptext2.innerHTML = "Somehow Patrick dies";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function ticklePatrick(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "You tickled Patrick";
+            ptext2.innerHTML = "Patrick becomes your friend";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
         function talkPatrick(){
             pic.src = "images/savage-patrick.jpg";
             ptext1.innerHTML = "What do you talk about to Patrick";
@@ -181,11 +246,43 @@
             b4.style.display = "none";
         }
 
+        function krustyKrab(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "This angers Patrick deeply, and he kills you";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "none";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+            function jellyfishPatrick(){
+            pic.src = "images/savage-patrick.jpg";
+            ptext1.innerHTML = "You and Patrick go Jellyfish catching";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
         function runPatrick(){
             pic.src = "images/savage-patrick.jpg";
             ptext1.innerHTML = "Patrick chased after you";
             ptext2.innerHTML = "but you narrowly escaped";
-            ptext3.innerHTML = "after you jumped into a seaweed.";
+            ptext3.innerHTML = "after you jumped into a patch of seaweed.";
             ptext4.innerHTML = "";
             b1.innerHTML = "Continue";
             b2.innerHTML = "";
@@ -199,16 +296,15 @@
 
         function meetSponge(){
             pic.src = "images/sponge.jpg";
-            ptext1.innerHTML = "You meet Spongebob";
+            ptext1.innerHTML = "You find Spongebob in the Jellyfish fields after wandering around for a bit. ";
             ptext2.innerHTML = "What do you do?";
             ptext3.innerHTML = "";
             ptext4.innerHTML = "";
             b1.innerHTML = "Attack";
-            b2.innerHTML = "Talk";
-            b3.innerHTML = "Run";
+            b2.innerHTML = "Run";
             b1.style.display = "block";
             b2.style.display = "block";
-            b3.style.display = "block";
+            b3.style.display = "none";
             b4.style.display = "none";
         }
 
@@ -228,6 +324,163 @@
             b4.style.display = "block";
         }
 
+            function slapSponge(){
+            pic.src = "images/karate-sponge.jpg";
+            ptext1.innerHTML = "This does nothing to Spongebob";
+            ptext2.innerHTML = "Spongebob karate chops you";
+            ptext3.innerHTML = "You died";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "none";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+            function punchSponge(){
+            pic.src = "images/sponge-dead.jpg";
+            ptext1.innerHTML = "You punched spongebob";
+            ptext2.innerHTML = "Spongebob falls over and starts crying";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+            
+            function tickleSponge(){
+            pic.src = "images/sponge.jpg";
+            ptext1.innerHTML = "You tickled spongebob";
+            ptext2.innerHTML = "You befriend Spongebob and go Jellyfish Catching";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function runSponge(){
+            pic.src = "images/sponge.jpg";
+            ptext1.innerHTML = "Spongebob chased after you. You almost got caught, but escaped after hidding in tall grass located in the Jellyfish fields.";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Continue";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function meetBoss(){
+            pic.src = "images/king-jelly.jpg";
+            ptext1.innerHTML = "You encounter a giant Jellyfish in the fields after wandering around in the Jellyfish fields. ";
+            ptext2.innerHTML = "What do you do?";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Attack the Jellyfish";
+            b1.style.display = "block";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+        function attackBoss(){
+            pic.src = "images/king-jelly.jpg";
+            ptext1.innerHTML = "What do you attack with?";
+            ptext2.innerHTML = "";
+            ptext3.innerHTML = "";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "Slap";
+            b2.innerHTML = "Punch";
+            b3.innerHTML = "Trombone";
+            b4.innerHTML = "Tickle";
+            b1.style.display = "block";
+            b2.style.display = "block";
+            b3.style.display = "block";
+            b4.style.display = "block";
+        }
+
+            function slapBoss(){
+            pic.src = "images/jelly-electro.jpg";
+            ptext1.innerHTML = "You slap the Jellyfish";
+            ptext2.innerHTML = "The Jellyfish electrocutes you";
+            ptext3.innerHTML = "You die";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "none";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+            function punchBoss(){
+            pic.src = "images/jelly-electro.jpg";
+            ptext1.innerHTML = "You punch the Jellyfish";
+            ptext2.innerHTML = "The Jellyfish electrocutes you";
+            ptext3.innerHTML = "You die";
+            ptext4.innerHTML = "";
+            b1.innerHTML = "";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "none";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
+            function tromboneBoss(){
+            pic.src = "images/cave.jpg";
+            ptext1.innerHTML = "You used a trombone against the Jellyfish";
+            ptext2.innerHTML = "The Jellyfish falls into a deep sleep";
+            ptext3.innerHTML = "You seal him inside a cave and save Bikini Bottom";
+            ptext4.innerHTML = "The End";
+            b1.innerHTML = "";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "none";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+            
+            function tickleBoss(){
+            pic.src = "images/king-jelly.jpg";
+            ptext1.innerHTML = "You tickled the giant Jellyfish";
+            ptext2.innerHTML = "The Jellyfish decides not to electrocute you";
+            ptext3.innerHTML = "You befriended the giant Jellyfish, and it no longer poses a threat to Bikini Bottom and the city is saved";
+            ptext4.innerHTML = "The End";
+            b1.innerHTML = "";
+            b2.innerHTML = "";
+            b3.innerHTML = "";
+            b4.innerHTML = "";
+            b1.style.display = "none";
+            b2.style.display = "none";
+            b3.style.display = "none";
+            b4.style.display = "none";
+        }
+
         //state machine
         function bclick(button){
             if(state == "intro"){
@@ -236,7 +489,6 @@
                     state = "meetPatrick";
                 }
                 else if(button == 2){
-                    //send to place
                     intro();
                     state = "intro";
                 }
@@ -249,11 +501,62 @@
                 else if(button == 2){
                     talkPatrick()
                     state = "talkPatrick"
-
                 }
                 else if(button == 3){
                     runPatrick()
                     state = "runPatrick"
+                }
+            }
+            else if(state == "attackPatrick"){
+                if(button == 1){
+                    slapPatrick()
+                    state = "slapPatrick"
+                }
+                else if(button == 2){
+                    punchPatrick()
+                    state = "dead"
+                }
+                else if(button == 3){
+                    trombonePatrick()
+                    state = "trombonePatrick"
+                }
+                else if(button == 4){
+                    ticklePatrick()
+                    state = "ticklePatrick"
+                }
+            }
+            else if(state == "slapPatrick"){
+                if(button == 1){
+                    meetSponge()
+                    state = "meetSponge"
+                }
+            }
+            else if(state == "trombonePatrick"){
+                if(button == 1){
+                    meetSponge()
+                    state = "meetSponge"
+                }
+            }
+            else if(state == "ticklePatrick"){
+                if(button == 1){
+                    meetSponge()
+                    state = "meetSponge"
+                }
+            }
+            else if(state == "talkPatrick"){
+                if(button == 1){
+                    krustyKrab()
+                    state = "dead"
+                }
+                else if(button == 2){
+                    jellyfishPatrick()
+                    state = "jellyfishPatrick"
+                }
+            }
+            else if(state == "jellyfishPatrick"){
+                if(button == 1){
+                    meetSponge()
+                    state = "meetSponge"
                 }
             }
             else if(state == "runPatrick"){
@@ -266,9 +569,64 @@
                 if(button == 1){
                     attackSponge()
                     state = "attackSponge"
-                }   
+                }
+                else if(button == 2){
+                    runSponge()
+                    state = "runSponge"
+                }
             }
-            
+            else if(state == "attackSponge"){
+                if(button == 1){
+                    slapSponge()
+                    state = "slapSponge"
+                }
+                else if(button == 2){
+                    punchSponge()
+                    state = "punchSponge"
+                }
+                else if(button == 3){
+                    tickleSponge()
+                    state = "tickleSponge"
+                }
+            }
+            else if(state == "punchSponge"){
+                if(button == 1){
+                    meetBoss()
+                    state = "meetBoss"
+                }
+            }
+            else if(state == "runSponge"){
+                if(button == 1){
+                    meetBoss();
+                    state = "meetBoss"
+                }
+            }
+            else if(state == "meetBoss"){
+                if(button == 1){
+                    attackBoss()
+                    state = "attackBoss"
+                }
+            }
+            else if(state == "attackBoss"){
+                if(button == 1){
+                    slapBoss()
+                    state = "slapBoss"
+                }
+                else if(button == 2){
+                    punchBoss()
+                    state = "punchBoss"
+                }
+                else if(button == 3){
+                    tromboneBoss()
+                    state = "tromboneBoss"
+                }
+                else if(button == 4){
+                    tickleBoss()
+                    state = "tickleBoss"
+                }
+            }
+
+
             return false;
         }
 
