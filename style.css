@@ -58,3 +58,7 @@
             border-collapse: collapse;
             text-align: left;
         }
+
+        p.paragraph {
+            width: 50%;
+        }
